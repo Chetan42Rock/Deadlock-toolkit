@@ -21,7 +21,7 @@ The **Deadlock Detection Toolkit** is a comprehensive web-based application that
 ## 📁 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/Deadlock-toolkit.git
+   git clone https://github.com/Chetan42Rock/Deadlock-toolkit
    ```
 2. Navigate to the project directory:
    ```bash
