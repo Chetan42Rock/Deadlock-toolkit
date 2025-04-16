@@ -35,11 +35,6 @@ To deploy to GitHub Pages:
    ```
 3. Run: `npm run deploy`
 
-## Screenshots
-
-![Home Page](screenshots/home.png)
-![Simulation Page](screenshots/simulation.png)
-
 ## License
 
 MIT
