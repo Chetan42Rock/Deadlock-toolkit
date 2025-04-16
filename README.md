@@ -34,7 +34,3 @@ To deploy to GitHub Pages:
    "deploy": "gh-pages -d build"
    ```
 3. Run: `npm run deploy`
-
-## License
-
-MIT
