@@ -54,7 +54,7 @@ const About = () => {
         <div className="bg-purple-800 p-6 rounded-lg">
           <h2 className="text-2xl mb-4">Resources</h2>
           <a 
-            href="https://github.com" 
+            href="https://github.com/Chetan42Rock/Deadlock-toolkit.git" 
             className="text-purple-300 hover:text-purple-200 transition"
             target="_blank"
             rel="noopener noreferrer"
