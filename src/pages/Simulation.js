@@ -123,36 +123,38 @@ const Simulation = () => {
           {/* Available Resources */}
           <div className="bg-purple-800 p-6 rounded-lg">
             <h2 className="text-2xl mb-4">Available Resources</h2>
-            <div className="flex space-x-2">
-              {available.map((val, i) => (
-                <div key={i} className="flex-1">
-                  <label className="block text-sm mb-1">R{i+1}</label>
-                  <input
-                    type="number"
-                    min="0"
-                    value={val}
-                    onChange={(e) => {
-                      const newAvailable = [...available];
-                      newAvailable[i] = parseInt(e.target.value) || 0;
-                      setAvailable(newAvailable);
-                    }}
-                    className="w-full p-2 rounded bg-purple-700 text-white"
-                  />
-                </div>
-              ))}
+            <div className="overflow-x-auto max-w-[800px]">
+              <div className="flex space-x-2 min-w-max">
+                {available.map((val, i) => (
+                  <div key={i} className="flex-none w-20">
+                    <label className="block text-sm mb-1">R{i+1}</label>
+                    <input
+                      type="number"
+                      min="0"
+                      value={val}
+                      onChange={(e) => {
+                        const newAvailable = [...available];
+                        newAvailable[i] = parseInt(e.target.value) || 0;
+                        setAvailable(newAvailable);
+                      }}
+                      className="w-full p-2 rounded bg-purple-700 text-white"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* Allocation Matrix */}
           <div className="bg-purple-800 p-6 rounded-lg">
             <h2 className="text-2xl mb-4">Allocation Matrix</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full">
+            <div className="overflow-x-auto max-w-[800px]">
+              <table className="w-max min-w-full" style={{ tableLayout: 'fixed' }}>
                 <thead>
                   <tr>
                     <th className="px-2 py-1"></th>
                     {Array.from({length: resources}).map((_, i) => (
-                      <th key={i} className="px-2 py-1">R{i+1}</th>
+                      <th key={i} className="px-2 py-1" style={{minWidth: '80px'}}>R{i+1}</th>
                     ))}
                   </tr>
                 </thead>
@@ -161,13 +163,13 @@ const Simulation = () => {
                     <tr key={i}>
                       <td className="px-2 py-1">P{i+1}</td>
                       {row.map((val, j) => (
-                        <td key={j} className="px-2 py-1">
+                        <td key={j} className="px-2 py-1" style={{minWidth: '80px'}}>
                           <input
                             type="number"
                             min="0"
                             value={val}
                             onChange={(e) => updateMatrix(allocation, setAllocation, i, j, e.target.value)}
-                            className="w-full p-1 rounded bg-purple-700 text-white"
+                            className="p-1 rounded bg-purple-700 text-white"
                           />
                         </td>
                       ))}
@@ -181,13 +183,13 @@ const Simulation = () => {
           {/* Request Matrix */}
           <div className="bg-purple-800 p-6 rounded-lg">
             <h2 className="text-2xl mb-4">Request Matrix</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full">
+            <div className="overflow-x-auto max-w-[800px]">
+              <table className="w-max min-w-full" style={{ tableLayout: 'fixed' }}>
                 <thead>
                   <tr>
                     <th className="px-2 py-1"></th>
                     {Array.from({length: resources}).map((_, i) => (
-                      <th key={i} className="px-2 py-1">R{i+1}</th>
+                      <th key={i} className="px-2 py-1" style={{minWidth: '80px'}}>R{i+1}</th>
                     ))}
                   </tr>
                 </thead>
@@ -196,13 +198,13 @@ const Simulation = () => {
                     <tr key={i}>
                       <td className="px-2 py-1">P{i+1}</td>
                       {row.map((val, j) => (
-                        <td key={j} className="px-2 py-1">
+                        <td key={j} className="px-2 py-1" style={{minWidth: '80px'}}>
                           <input
                             type="number"
                             min="0"
                             value={val}
                             onChange={(e) => updateMatrix(request, setRequest, i, j, e.target.value)}
-                            className="w-full p-1 rounded bg-purple-700 text-white"
+                            className="p-1 rounded bg-purple-700 text-white"
                           />
                         </td>
                       ))}
@@ -251,8 +253,8 @@ const Simulation = () => {
                 {/* Deadlock Visualization */}
                 <div className="mt-6">
                   <h3 className="text-xl mb-3">Deadlock Visualization</h3>
-                  <div className="bg-purple-900 p-4 rounded-lg">
-                    <div className="flex justify-center">
+                  <div className="bg-purple-900 p-4 rounded-lg overflow-x-auto max-w-full">
+                    <div className="flex justify-center min-w-max">
                       {allocation.map((_, i) => (
                         <div key={i} className="flex flex-col items-center mx-4">
                           <div className="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center mb-2">
