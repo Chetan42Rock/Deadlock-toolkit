@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Deadlock-toolkit/static/css/main.ee4a18a6.css",
-    "main.js": "/Deadlock-toolkit/static/js/main.c8ae7b87.js",
+    "main.js": "/Deadlock-toolkit/static/js/main.66200a88.js",
     "static/js/453.56833e76.chunk.js": "/Deadlock-toolkit/static/js/453.56833e76.chunk.js",
     "index.html": "/Deadlock-toolkit/index.html",
     "main.ee4a18a6.css.map": "/Deadlock-toolkit/static/css/main.ee4a18a6.css.map",
-    "main.c8ae7b87.js.map": "/Deadlock-toolkit/static/js/main.c8ae7b87.js.map",
+    "main.66200a88.js.map": "/Deadlock-toolkit/static/js/main.66200a88.js.map",
     "453.56833e76.chunk.js.map": "/Deadlock-toolkit/static/js/453.56833e76.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee4a18a6.css",
-    "static/js/main.c8ae7b87.js"
+    "static/js/main.66200a88.js"
   ]
 }
