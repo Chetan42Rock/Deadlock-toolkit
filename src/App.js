@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Simulation from './pages/Simulation';
 import About from './pages/About';
+import HowToUse from './pages/HowToUse';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/simulation" element={<Simulation />} />
             <Route path="/about" element={<About />} />
+            <Route path="/how-to-use" element={<HowToUse />} />
           </Routes>
         </main>
       </div>

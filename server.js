@@ -43,10 +43,19 @@ function detectDeadlock(allocation, request, available) {
     if (!found) break;
   }
 
+  // Collect deadlocked processes (not finished)
+  const deadlockedProcesses = [];
+  for (let i = 0; i < n; i++) {
+    if (!finish[i]) {
+      deadlockedProcesses.push(i);
+    }
+  }
+
   return {
     isSafe: count === n,
     safeSequence: safeSequence,
-    hasDeadlock: count < n
+    hasDeadlock: count < n,
+    deadlockedProcesses: deadlockedProcesses
   };
 }
 
